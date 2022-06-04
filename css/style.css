@@ -1,58 +1,72 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background-image: url(../img/patt.png);
 }
+
 .container {
     width: 1200px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
 }
+
 .row {
     margin-left: -15px;
     margin-right: -15px;
 }
-.row::after, .menu::after{
+
+.row::after,
+.menu::after {
     content: "";
     clear: both;
     display: block;
 }
+
 .col-md-3 {
     width: 25%;
 }
+
 .col-md-6 {
     width: 50%;
 }
+
 [class*="col-"] {
     float: left;
     padding-left: 15px;
     padding-right: 15px;
 }
+
 .header {
     background-color: rgba(255, 255, 255, 0.75);
     padding: 25px 0;
 }
+
 .logo_image {
     margin: 32px 124px 28px 16px;
 
 }
+
 .menu_block {
     display: flex;
 }
+
 .menu_block li {
     list-style: none;
     padding: 28px 42px;
     border-left: 1px solid #2c71b8;
 }
+
 .menu_block a {
     text-decoration: none;
     color: #2c71b8;
 }
+
 .search_input {
     border-color: #2c71b8;
     font-size: 21px;
@@ -60,27 +74,34 @@ body {
     box-sizing: border-box;
     width: 200px;
 }
+
 .search_block {
     position: relative;
 }
+
 .magnifier {
     background-color: #2c71b8;
     position: absolute;
     top: 4px;
     right: 4px;
 }
+
 .logo {
     margin-top: 7px;
 }
-.menu li {
+
+.menu > li {
     float: left;
     width: 25%;
     border-left: 1px solid #2c71b8;
+    position: relative;
 }
-.menu li:last-child {
-    border-right:  1px solid #2c71b8;
+
+.menu > li:last-child {
+    border-right: 1px solid #2c71b8;
 }
-.menu a {
+
+.menu > li > a {
     display: block;
     height: 50px;
     text-decoration: none;
@@ -90,7 +111,158 @@ body {
     font-weight: 300;
     font-size: 21px;
 }
-.menu a:hover {
+
+.menu > li > a:hover {
     background-color: #2c71b8;
     color: white;
+}
+
+.active {
+    background-image: url(../img/down_arrow.png);
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    background-size: 1em;
+}
+
+.active:hover {
+    background-image: url(../img/down_arrow_white.png);
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    background-size: 1em;
+}
+
+.submenu {
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    left: -1px;
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: rotateX(-90deg);
+    transition: .3s linear;
+}
+
+.submenu > li {
+    float: none;
+    width: 201%;
+}
+
+.submenu > li > a {
+    display: block;
+    padding: 12px 0 12px 28px;
+    width: 100%;
+    text-decoration: none;
+    background-color: #2c71b8;
+    color: white;
+    text-align: left;
+    line-height: 21px;
+    font-weight: 300;
+    font-size: 21px;
+}
+
+.menu > li:hover > .submenu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu >li:hover > a {
+    background-color: #2c71b8;
+    color: white;
+}
+
+.menu >li:hover > .active {
+    background-image: url(../img/down_arrow_white.png);
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    background-size: 1em;
+}
+
+.submenu > li > a:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #2c71b8;
+}
+
+.col-md-9 {
+    width: 75%;
+}
+
+.form-search {
+    border: 1px solid #2c71b8;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding: 4px;
+    position: relative;
+}
+
+.form-search input {
+    border: none;
+    background: transparent;
+}
+
+.form-search input:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: #2c71b8;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+::-moz-placeholder {
+    color: #2c71b8;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+:-ms-input-placeholder {
+    color: #2c71b8;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+:-moz-placeholder {
+    color: #2c71b8;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.search-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-image: url(../img/search.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #2c71b8;
+}
+
+.cart {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    background-color: white;
+    background-image: url(../img/cart.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product-count {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 90%;
+    background-color: #2c71b8;
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    line-height: 20px;
 }
