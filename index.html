@@ -47,13 +47,13 @@
 					<div class="row">
 						<div class="col-md-9">
 							<form class="form-search">
-								<input type="text" placeholder="search">
+								<input type="text" placeholder="Search">
 								<button class="search-btn"></button>
 							</form>
 						</div>
 						<div class="col-md-3">
 							<div class="cart">
-								<div class="product-count">0</div>
+								<div class="product-count" id="products-count">0</div>
 							</div>
 						</div>
 					</div>
@@ -130,7 +130,7 @@
 									<div class="zoom"></div>
 									<div class="like"></div>
 								</div>
-								<div class="product-body">
+								<div class="product-body"> 
 									<div class="product-title">#1 Device Name</div>
 									<div class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
 									<div class="product-features">
@@ -148,6 +148,13 @@
 										</div>
 									</div>
 									<div class="product-price">$599 <span class="degree">25</span> </div>
+
+									<div class="product-quanity">
+										<button class="decrement-button">-</button>
+										<input type="text" value="1" readonly>
+										<button class="increment-button">+</button>
+									</div>
+
 									<button class="button_det">More details</button>
 									<button class="button_cart">Add to cart</button>
 								</div>
@@ -178,6 +185,13 @@
 										</div>
 									</div>
 									<div class="product-price">$1250 <span class="degree">99</span> </div>
+									
+									<div class="product-quanity">
+										<button class="decrement-button">-</button>
+										<input type="text" value="1" readonly>
+										<button class="increment-button">+</button>
+									</div>
+									
 									<button class="button_det">More details</button>
 									<button class="button_cart">Add to cart</button>
 								</div>
@@ -208,6 +222,13 @@
 										</div>
 									</div>
 									<div class="product-price">$399 <span class="degree">50</span> </div>
+									
+									<div class="product-quanity">
+										<button class="decrement-button">-</button>
+										<input type="text" value="1" readonly>
+										<button class="increment-button">+</button>
+									</div>
+									
 									<button class="button_det">More details</button>
 									<button class="button_cart">Add to cart</button>
 								</div>
@@ -238,6 +259,13 @@
 										</div>
 									</div>
 									<div class="product-price">$599 <span class="degree">25</span> </div>
+									
+									<div class="product-quanity">
+										<button class="decrement-button">-</button>
+										<input type="text" value="1" readonly>
+										<button class="increment-button">+</button>
+									</div>
+									
 									<button class="button_det">More details</button>
 									<button class="button_cart">Add to cart</button>
 								</div>
@@ -268,6 +296,13 @@
 										</div>
 									</div>
 									<div class="product-price">$1250 <span class="degree">99</span> </div>
+									
+									<div class="product-quanity">
+										<button class="decrement-button">-</button>
+										<input type="text" value="1" readonly>
+										<button class="increment-button">+</button>
+									</div>
+									
 									<button class="button_det">More details</button>
 									<button class="button_cart">Add to cart</button>
 								</div>
@@ -298,6 +333,13 @@
 										</div>
 									</div>
 									<div class="product-price">$399 <span class="degree">50</span> </div>
+									
+									<div class="product-quanity">
+										<button class="decrement-button">-</button>
+										<input type="text" value="1" readonly>
+										<button class="increment-button">+</button>
+									</div>
+									
 									<button class="button_det">More details</button>
 									<button class="button_cart">Add to cart</button>
 								</div>
@@ -328,6 +370,13 @@
 										</div>
 									</div>
 									<div class="product-price">$599 <span class="degree">25</span> </div>
+									
+									<div class="product-quanity">
+										<button class="decrement-button">-</button>
+										<input type="text" value="1" readonly>
+										<button class="increment-button">+</button>
+									</div>
+									
 									<button class="button_det">More details</button>
 									<button class="button_cart">Add to cart</button>
 								</div>
@@ -358,6 +407,13 @@
 										</div>
 									</div>
 									<div class="product-price">$1250 <span class="degree">99</span> </div>
+									
+									<div class="product-quanity">
+										<button class="decrement-button">-</button>
+										<input type="text" value="1" readonly>
+										<button class="increment-button">+</button>
+									</div>
+									
 									<button class="button_det">More details</button>
 									<button class="button_cart">Add to cart</button>
 								</div>
@@ -388,6 +444,13 @@
 										</div>
 									</div>
 									<div class="product-price">$399 <span class="degree">50</span> </div>
+									
+									<div class="product-quanity">
+										<button class="decrement-button">-</button>
+										<input type="text" value="1" readonly>
+										<button class="increment-button">+</button>
+									</div>
+									
 									<button class="button_det">More details</button>
 									<button class="button_cart">Add to cart</button>
 								</div>
@@ -405,6 +468,32 @@
 			</div>
 		</div>
 	</main>
+	<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="footer_text"> &copy; Copyright 2017 </div>
+					</div>
+				</div>
+			</div>
+	</footer>
+
+	<div class="modal">
+		<div class="modal-block">
+			<form>
+				<div class="btn-close">X</div>
+				<h3>Please call for more details</h3>
+				<div class="form-fields">
+					<input type="text" placeholder="Your name">
+				</div>
+				<div class="form-fields">
+					<input type="text" placeholder="Your phone">
+				</div>
+				<button class="modal_btn">Please call</button>
+			</form>
+		</div>
+	</div>
+	<script src="app.js"></script>
 </body>
 
 </html>
