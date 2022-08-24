@@ -93,6 +93,7 @@ body {
 
 .menu>li {
     float: left;
+    max-width: 25%;
     width: 25%;
     border-left: 1px solid #2c71b8;
     position: relative;
@@ -105,6 +106,7 @@ body {
 .menu>li>a {
     display: block;
     height: 50px;
+    width: 100%;
     text-decoration: none;
     color: #2c71b8;
     text-align: center;
@@ -114,6 +116,9 @@ body {
 }
 
 .menu>li>a:hover {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     background-color: #2c71b8;
     color: white;
 }
@@ -676,4 +681,61 @@ form > h3 {
     color:#2c71b8;
     font-weight: 700;
     font-size: 16px;
+}
+
+.slider_section {
+    background-color:rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #fff;
+}
+
+.slider-block > div {
+    width: 100%;
+    padding: 160px 0;
+    font-size: 100px;
+    font-weight: 100;
+    color: #ffffff;
+    text-align: center;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    border:1px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    color:rgba(255, 255, 255, 0)
+}
+
+.slick-dots li.slick-active button:before {
+    background-color: #fff;
+    color:rgba(255, 255, 255, 0);
+}
+.slick-prev:before {
+    content: '<';
+}
+
+.slick-next:before {
+    content: '>';
+}
+
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
 }

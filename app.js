@@ -96,4 +96,15 @@ function Counter (incrementButton, decrementButton, inputField, minCount = 1, ma
     this.domRefs.decrementButton.addEventListener("click",this.decrement.bind(this));
 }
 
-let counter1 = new Counter (incrementButtons, decrementButtons, quantityValue);
+// let counter1 = new Counter (incrementButtons, decrementButtons, quantityValue);
+
+const counters = [];
+
+quantityValue.forEach ((item, i) => {
+    counters[i] = new Counter (incrementButtons[i], decrementButtons[i], item);
+});
+
+$('.slider-block').slick({
+    // autoplay : true,
+    dots : true,
+});
