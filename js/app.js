@@ -104,7 +104,11 @@ quantityValue.forEach ((item, i) => {
     counters[i] = new Counter (incrementButtons[i], decrementButtons[i], item);
 });
 
-$('.slider-block').slick({
-    // autoplay : true,
-    dots : true,
-});
+$(document).ready(function() {
+    $('.slider-block').slick({
+        arrows: true,
+        dots: true,
+        speed: 2000,
+        infinite: true,
+    });
+})
